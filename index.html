@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicias en el Mundo Web</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <img src="imagenes/logo.jpg" alt="Logo de Delicias">
+
+            <h1>DELICIAS</h1>
+
+        </div>
+
+
+        <nav>
+
+            <a href="#inicio">Inicio</a>
+
+            <a href="#productos">Productos</a>
+
+            <a href="#contacto">Contacto</a>
+
+        </nav>
+
+
+        <button
+            onclick="mostrarCarrito()"
+            class="boton-carrito">
+
+            Carrito
+            (<span id="cantidad">0</span>)
+
+        </button>
+
+    </header>
+
+    <section id="inicio" class="inicio">
+
+        <div class="inicio-texto">
+
+            <h2>Bienvenidos a Delicias</h2>
+
+            <p>
+                Disfruta de nuestros deliciosos productos
+                y comparte momentos especiales con tu familia
+                y amigos.
+            </p>
+
+            <a
+                href="#productos"
+                class="boton">
+
+                Ver productos
+
+            </a>
+
+        </div>
+
+
+        <div class="imagen-inicio">
+
+            <img
+                src="imagenes/helado.jpg"
+                alt="Helado">
+
+        </div>
+
+    </section>
+
+    <section id="productos">
+
+        <h2 class="titulo">
+            Nuestros Productos
+        </h2>
+
+
+        <div class="productos">
+
+
+            <div class="producto">
+
+                <img
+                    src="imagenes/helado.jpg"
+                    alt="Helado">
+
+                <h3>Helado</h3>
+
+                <p>
+                    Deliciosos helados de diferentes sabores.
+                </p>
+
+                <p class="precio">
+                    Bs. 10
+                </p>
+
+                <button
+                    onclick="agregarProducto('Helado', 5)">
+
+                    Agregar al carrito
+
+                </button>
+
+            </div>
+
+            <div class="producto">
+
+                <img
+                    src="imagenes/salchipapa.jpg"
+                    alt="Salchipapa">
+
+                <h3>Salchipapa</h3>
+
+                <p>
+                    Papas fritas acompañadas con salchicha.
+                </p>
+
+                <p class="precio">
+                    Bs. 15
+                </p>
+
+                <button
+                    onclick="agregarProducto('Salchipapa', 15)">
+
+                    Agregar al carrito
+
+                </button>
+
+            </div>
+
+            <div class="producto">
+
+                <img
+                    src="imagenes/hamburguesa.jpg"
+                    alt="Hamburguesa">
+
+                <h3>Hamburguesa</h3>
+
+                <p>
+                    Hamburguesa preparada con ingredientes
+                    frescos y deliciosos.
+                </p>
+
+                <p class="precio">
+                    Bs. 20
+                </p>
+
+                <button
+                    onclick="agregarProducto('Hamburguesa', 20)">
+
+                    Agregar al carrito
+
+                </button>
+
+            </div>
+
+            <div class="producto">
+
+                <img
+                    src="imagenes/pollo.jpg"
+                    alt="Pollo a la canasta">
+
+                <h3>Pollo a la canasta</h3>
+
+                <p>
+                    Pollo crujiente acompañado de papas y platano maduro.
+                </p>
+
+                <p class="precio">
+                    Bs. 20
+                </p>
+
+                <button
+                    onclick="agregarProducto('Pollo a la canasta', 20)">
+
+                    Agregar al carrito
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section id="contacto" class="contacto">
+
+        <h2>Contacto</h2>
+
+        <p>
+            Dirección:
+            Zona 16 de Julio, calle Alfonso Becerra.
+        </p>
+
+        <p>
+            Realiza tus pedidos y consultas por WhatsApp.
+        </p>
+
+
+        <a
+            href="https://wa.me/59163390248"
+            target="_blank"
+            class="whatsapp">
+
+            Pedir por WhatsApp
+
+        </a>
+
+    </section>
+
+    <div
+        id="ventana-carrito"
+        class="carrito">
+
+
+        <div class="contenido-carrito">
+
+
+            <button
+                class="cerrar"
+                onclick="cerrarCarrito()">
+
+                X
+
+            </button>
+
+
+            <h2>
+                Mi carrito
+            </h2>
+
+
+            <div id="lista-carrito">
+
+                <p>
+                    El carrito está vacío.
+                </p>
+
+            </div>
+
+            <h3>
+
+                Total: Bs.
+
+                <span id="total">
+                    0
+                </span>
+
+            </h3>
+
+
+            <button
+                onclick="enviarWhatsApp()"
+                class="whatsapp">
+
+                Enviar pedido por WhatsApp
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>
+            © 2026 Delicias en el Mundo Web
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

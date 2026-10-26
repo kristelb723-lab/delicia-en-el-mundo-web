@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+
+}
+
+header {
+    background-color: #ff6f91;
+    color: white;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+}
+
+nav a:hover {
+    text-decoration: underline;
+
+}
+
+.boton-carrito {
+    background-color: white;
+    color: #e91e63;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.boton-carrito:hover {
+    background-color: #ffe0e9;
+
+}
+
+.inicio {
+    min-height: 420px;
+    padding: 60px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background-color: #ffe0e9;
+
+}
+
+.inicio-texto {
+    max-width: 550px;
+
+}
+
+.inicio h2 {
+    font-size: 42px;
+    color: #e91e63;
+    margin-bottom: 15px;
+
+}
+
+.inicio p {
+    font-size: 20px;
+    line-height: 1.6;
+
+}
+
+.imagen-inicio img {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px #bbb;
+
+}
+
+.boton {
+    display: inline-block;
+    background-color: #ff4081;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin-top: 10px;
+
+}
+
+.boton:hover {
+    background-color: #e91e63;
+
+}
+
+#productos {
+    padding: 60px 8%;
+
+}
+
+.titulo {
+    text-align: center;
+    color: #e91e63;
+    font-size: 34px;
+    margin-bottom: 40px;
+
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+
+}
+
+.producto {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #ddd;
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px #ccc;
+
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+.producto h3 {
+    color: #e91e63;
+    font-size: 22px;
+
+}
+
+.producto p {
+    line-height: 1.5;
+
+}
+.precio {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff6f00;
+
+}
+
+.producto button {
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.producto button:hover {
+    background-color: #e91e63;
+
+}
+
+.contacto {
+    background-color: #ffd6e2;
+    text-align: center;
+    padding: 55px 20px;
+
+}
+
+.contacto h2 {
+    color: #e91e63;
+    font-size: 32px;
+
+}
+
+.contacto p {
+    font-size: 18px;
+
+}
+
+.whatsapp {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.whatsapp:hover {
+    background-color: #1da851;
+
+}
+
+.carrito {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.contenido-carrito {
+    background-color: white;
+    width: 400px;
+    max-width: 90%;
+    margin: 70px auto;
+    padding: 25px;
+    border-radius: 15px;
+
+}
+
+
+.cerrar {
+    float: right;
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.item-carrito button {
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #e91e63;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+}
+
+@media (max-width: 1000px) {
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+
+    }
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .inicio h2 {
+        font-size: 32px;
+
+    }
+
+    .imagen-inicio img {
+        width: 280px;
+        height: 230px;
+
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+
+    }
+}
